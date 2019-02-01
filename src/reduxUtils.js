@@ -1,7 +1,6 @@
 import { addPost, addPosts } from "./actions/postActions";
 
 export const mapStateToProps = state => {
-  console.log(state);
   return { posts: state.postsReducer.posts };
 };
 
