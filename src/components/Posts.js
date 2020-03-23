@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import { addPosts } from "../actions/postActions";
 
 const Posts = () => {
-  const posts = useSelector(state => state.posts);
+  const posts = useSelector(state => Object.values(state.posts));
   const dispatch = useDispatch();
   useEffect(() => {
     const fetchPosts = async () => {
@@ -21,7 +21,7 @@ const Posts = () => {
   return (
     <>
     <Link to="/posts/new">Add New Post</Link>
-    {posts.map(el => {
+    {posts.reverse().map(el => {
       return <li key={el.id}>{el.title}</li>;
     })}
   </>

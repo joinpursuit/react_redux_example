@@ -4,7 +4,7 @@ import { addPost } from "../actions/postActions";
 
 const Form = () => {
   const [title, setTitle] = useState("")
-  const posts = useSelector(state => state.posts)
+  const posts = useSelector(state => Object.values(state.posts));
   const dispatch = useDispatch()
 
   const handleSubmit = e => {
