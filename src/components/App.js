@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 
 import Navbar from "./Navbar";
-import PostsContainer from "../containers/PostsContainer";
-import FormContainer from "../containers/FormContainer";
+import Posts from "../components/Posts";
+import Form from "../components/Form";
 
 class App extends Component {
   render() {
@@ -11,9 +11,15 @@ class App extends Component {
       <>
         <Navbar />
         <Switch>
-          <Route exact path="/" render={() => <h1>Home</h1>} />
-          <Route exact path="/posts" component={PostsContainer} />
-          <Route path="/posts/new" component={FormContainer} />
+          <Route exact path="/">
+            <h1>Home</h1>
+          </Route>
+          <Route exact path="/posts">
+              <Posts/>
+          </Route> 
+          <Route path="/posts/new">
+            <Form/>
+          </Route> 
         </Switch>
       </>
     );
