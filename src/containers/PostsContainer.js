@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from "axios";
 import { connect } from "react-redux";
-import { mapStateToProps, mapDispatchToProps } from "../redux-utils";
+import { mapStateToProps, mapDispatchToProps } from "../reduxUtils";
 
 import Posts from "../components/Posts";
 

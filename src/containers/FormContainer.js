@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { mapStateToProps, mapDispatchToProps } from "../redux-utils";
+import { mapStateToProps, mapDispatchToProps } from "../reduxUtils";
 
 import Form from "../components/Form";
 
